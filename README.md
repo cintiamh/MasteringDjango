@@ -43,3 +43,17 @@ Generated files:
 * mysite/settings.py - settings configurations for this projects.
 * mysite/urls.py - the URL declarations for this project.
 * mysite/wsgi.py - an entry-point for WSGI-compatible web servers to serve your project.
+
+### Django settings
+
+By default settings.py comes with some installed apps.
+
+Some of these applications uses at least one database table.
+
+```
+$ docker-compose up
+$ docker ps
+# find the container's id of your Django app
+$ docker exec -t -i 66175bfd6ae6 bash
+$ python manage.py migrate
+```
